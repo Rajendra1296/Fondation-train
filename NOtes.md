@@ -11,4 +11,4 @@ The war was fought between netscape & IE
 -react
 2.DB 3. BE
 
-Eelemnt selector
+Elemnt selector
