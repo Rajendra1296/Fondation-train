@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      {
+        var x1 = 10;
+        let x2 = 20;
+      }
+
+      console.log(x1); // prints 10 as var cant be restricted by block it can be restricted only by function as below
+      console.log(x2); //prints undefined  as let wont be outside the block
+
+      functionfun();
+      {
+        var x1 = 10;
+        let x2 = 20;
+      }
+      console.log(x1); // prints undefined it can be restricted only by function as below
+      console.log(x2); //prints undefined  as let wont be outside the block
+
+      function dirvingtest(age) {
+        if (age > 18) {
+          let msg = "eligible";
+        } else {
+          let msg = "not eligible";
+        }
+        console.log("you are" + msg); // prints notdefined as the as the let gets killed in the block only
+        /* hence to make the code work make sure that the 
+        either code have var in if loop 
+        or use console in lopp itself
+        or give msg= val in lopp it self */
+      }
+      dirvingtest(20);
+
+      var x1 = 3;
+      var x2 = "5";
+
+      console.log(x1 + x2); // prints 35 as it can concatinate using + so by default it add string as it is overloading  and chose it over mathmetical addition
+      console.log(x1 - x2); // prints -2 as only sub is -
+
+      // this is called implict coercion/type casting
+
+      var x1 = 3;
+      var x2 = "5";
+
+      console.log(x1 + parseInt(x2)); // prints 8 as we changed the data type
+      console.log(x1 - x2); // prints -2 as only sub is -
+
+      // this is called explict coercion/type casting
+
+      var g1 = 3;
+      var g2 = "5";
+      console.log(g1 == g2);
+      console.log(g1 === g2);
+    </script>
+  </body>
+</html>
